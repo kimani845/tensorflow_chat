@@ -91,5 +91,6 @@ sgd = SGD(lr=0.01, decay=1e-6, momentum=0.9, nesterov=True) # Creating an SGD op
 # Compiling the model with categorical crossentropy loss function and adam optimizer
 model.compile(loss='categorical_crossentropy',
                 optimizer=sgd, metrics=['accuracy']) 
-
+hist = model.fit(np.array(train_x), np.array(train_y),
+                    epochs=200, batch_size=5, verbose=1) # Fitting the model to the training data with 200 epochs and batch size of 5
     
