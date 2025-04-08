@@ -67,5 +67,10 @@ for document in documents:
     output_empty[classes.index(document[1])] = 1 # Setting the index of the class to 1 in the output_row list
     training.append([bag, output_row]) # Appending the bag and output_row to the training list
     
+# Shuffling the training data
+random.shuffle(training) # Shuffling the training data
+# Creating a list to hold the training data
+training = np.array(training, dtype=object) # Converting the training list to a numpy array
+
 
     
