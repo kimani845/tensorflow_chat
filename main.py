@@ -29,3 +29,10 @@ def clean_up_sentence(sentence):
 def bagw(sentence, words):
     # Seprating the words from the sentence
     sentence_words = clean_up_sentence(sentence) # Getting the list of words in the sentence
+    bag = [0] * len(words) # Creating an empty list of 0's with the same length as the words list
+    for w in sentence_words: # Looping through the words in the sentence
+        for i, word in enumerate(words): # Looping through the words list
+            if word == w: # If the word is present in the sentence
+                bag[i] = 1 # Setting the index of the word to 1 in the bag list
+                
+    return np.array(bag) # Returning the bag list as a numpy array
