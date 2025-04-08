@@ -27,7 +27,7 @@ def clean_up_sentence(sentence):
 
 #  Appending 1 to the index of the words that are present in the sentence and 0 to the rest of the words
 def bagw(sentence, words):
-    # Seprating the words from the sentence
+    # Seprating the words from the input sentence
     sentence_words = clean_up_sentence(sentence) # Getting the list of words in the sentence
     bag = [0] * len(words) # Creating an empty list of 0's with the same length as the words list
     for w in sentence_words: # Looping through the words in the sentence
@@ -36,3 +36,17 @@ def bagw(sentence, words):
                 bag[i] = 1 # Setting the index of the word to 1 in the bag list
                 
     return np.array(bag) # Returning the bag list as a numpy array
+
+# A function to predict the class of the input sentence
+def predict_class(sentence, model):
+    # Getting the bag of words for the input sentence
+    p = bagw(sentence, words) # Getting the bag of words for the input sentence
+    res = model.predict(np.array([p]))[0] # Predicting the class of the input sentence
+    ERROR_THRESHOLD = 0.25 # Setting the error threshold
+    results = [[i, r] for i, r in enumerate(res) if r > ERROR_THRESHOLD] # Getting the index and probability of the predicted class
+    results.sort(key=lambda x: x[1], reverse=True) # Sorting the results in descending order of probability
+    return_list = [] # Creating an empty list to hold the predicted classes and probabilities
+    for r in results: # Looping through the results
+        return_list.append({'intent': classes[r[0]], 'probability': str(r[1])}) # Appending the predicted class and probability to the return_list
+    
+    return return_list # Returning the list of predicted classes and probabilities
