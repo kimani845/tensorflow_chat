@@ -75,4 +75,8 @@ training = np.array(training, dtype=object) # Converting the training list to a 
 train_x = list(training[:, 0]) # Getting the first column of the training data
 train_y = list(training[:, 1]) # Getting the second column of the training data
 
+# Creating a sequential machine learning model
+model = Sequential()
+model.add(Dense(128, input_shape=len(train_x[0]),
+                activation='relu')) # Adding a dense layer with 128 neurons and relu activation function
     
