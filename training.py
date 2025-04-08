@@ -93,4 +93,7 @@ model.compile(loss='categorical_crossentropy',
                 optimizer=sgd, metrics=['accuracy']) 
 hist = model.fit(np.array(train_x), np.array(train_y),
                     epochs=200, batch_size=5, verbose=1) # Fitting the model to the training data with 200 epochs and batch size of 5
+
+#saving the model to a file
+model.save('chatbot_model.h5', hist) # Saving the model to a file
     
