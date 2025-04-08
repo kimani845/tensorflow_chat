@@ -56,5 +56,16 @@ for document in documents:
     bag = [] # Creating an empty list to hold the bag of words
     word_patterns = r'\b' + r'\w+\b' # Regular expression to match words 
     word_list = document[0] # Getting the word list from the document
+    word_list = [lemmatizer.lemmatize(
+        w.lower()) for w in word_list] # Lemmatizing the words in the word list 
+    for word in words:
+        bag.append(1) if word in word_list else bag.append(0)
+        
+    
+    # Making a copy of the output_empty 
+    output_row = list(output_empty) # Creating a copy of the output_empty list
+    output_empty[classes.index(document[1])] = 1 # Setting the index of the class to 1 in the output_row list
+    training.append([bag, output_row]) # Appending the bag and output_row to the training list
+    
 
     
