@@ -71,6 +71,8 @@ for document in documents:
 random.shuffle(training) # Shuffling the training data
 # Creating a list to hold the training data
 training = np.array(training, dtype=object) # Converting the training list to a numpy array
-
+# Splitting the training data into X and y
+train_x = list(training[:, 0]) # Getting the first column of the training data
+train_y = list(training[:, 1]) # Getting the second column of the training data
 
     
