@@ -82,4 +82,8 @@ model.add(Dense(128, input_shape=len(train_x[0]),
 
 model.add(Dropout(0.5)) # Adding a dropout layer with 50% dropout rate
 model.add(Dense(64, activation='relu')) # Adding a dense layer with 64 neurons and relu activation function
+model.add(Dropout(0.5)) # Adding a dropout layer with 50% dropout rate
+model.add(Dense(len(train_y[0]), 
+                activation='softmax')) # Adding a dense layer with the same number of neurons as the output and softmax activation function
+# model.compile(loss='categorical_crossentropy', optimizer=Adam(learning_rate=0.001), metrics=['accuracy']) # Compiling the model with categorical crossentropy loss function and adam optimizer
     
