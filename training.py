@@ -96,4 +96,7 @@ hist = model.fit(np.array(train_x), np.array(train_y),
 
 #saving the model to a file
 model.save('chatbot_model.h5', hist) # Saving the model to a file
+
+# Print statement to show that the model has been trained successfully
+print("Model trained successfully")
     
