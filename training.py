@@ -47,3 +47,14 @@ words = sorted(set(words)) # Remove duplicates and sort the words
 #  Saving the words and classes to binary files
 pickle.dump(words, open('words.pkl', 'wb'))
 pickle.dump(classes, open('classes.pkl', 'wb'))
+
+# classifying data into 0's and 1's for the neural network to work with
+# Creating an empply list to hold the training data
+training = []
+output_empty = [0] * len(classes) # Creating an empty list of 0's with the same length as the classes
+for document in documents:
+    bag = [] # Creating an empty list to hold the bag of words
+    word_patterns = r'\b' + r'\w+\b' # Regular expression to match words 
+    word_list = document[0] # Getting the word list from the document
+
+    
