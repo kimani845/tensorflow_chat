@@ -79,4 +79,7 @@ train_y = list(training[:, 1]) # Getting the second column of the training data
 model = Sequential()
 model.add(Dense(128, input_shape=len(train_x[0]),
                 activation='relu')) # Adding a dense layer with 128 neurons and relu activation function
+
+model.add(Dropout(0.5)) # Adding a dropout layer with 50% dropout rate
+model.add(Dense(64, activation='relu')) # Adding a dense layer with 64 neurons and relu activation function
     
