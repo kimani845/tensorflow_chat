@@ -1,0 +1,574 @@
+"intents": [
+    {
+        "tag":"greetings",
+        "patterns":[
+            "Hi",
+            "Hello",
+            "Is anyone there?",
+            "Good day",
+            "Hey"
+        ],
+        "responses":[
+            "Hello! How can I assist you today?",
+            "Hi there! How can I help you?",
+            "Greetings! What can I do for you?",
+            "Hello! How may I assist you today?"
+        ]
+        // "context_set":""    
+    },
+    {
+        "tag":"goodbye",
+        "patterns":[
+            "Bye",
+            "See you later",
+            "Goodbye",
+            "Take care",
+            "See you soon"
+        ],
+        "responses":[
+            "Goodbye! Have a great day!",
+            "See you later! Take care!",
+            "Bye! Hope to see you again soon!",
+            "Goodbye! Stay safe!"
+        ],
+        // "context_set":""    
+    },
+    {
+        "tag":"thanks",
+        "patterns":[
+            "Thanks",
+            "Thank you",
+            "That's helpful",
+            "Thanks for your help",
+            "I appreciate it"
+        ],
+        "responses":[
+            "You're welcome! I'm here to help.",
+            "No problem! Glad I could assist.",
+            "Anytime! If you have more questions, feel free to ask.",
+            "You're welcome! Let me know if you need anything else."
+        ],
+        // "context_set":""    
+    },
+    {
+        "tag":"noanswer",
+        "patterns":[],
+        "responses":[
+            "Sorry, I didn't understand that.",
+            "Could you please rephrase?",
+            "I'm not sure I understand. Can you elaborate?",
+            "I apologize, but I don't have an answer for that."
+        ],
+        // "context_set":""    
+    },
+    {
+        "tag":"options",
+        "patterns":[
+            "What are your options?",
+            "What can you do?",
+            "Tell me your features",
+            "What services do you provide?",
+            "What can I ask you?"
+        ],
+        "responses":[
+            "I can assist you with various tasks. Just ask!",
+            "I can help with information, advice, and more. What do you need?",
+            "Feel free to ask me anything! I'm here to help.",
+            "I can provide information, answer questions, and assist with tasks."
+        ],
+        // "context_set":""    
+    },
+    {
+        "tag":"help",
+        "patterns":[
+            "Can you help me?",
+            "I need assistance",
+            "Help me out",
+            "Can you assist me?",
+            "I need help"
+        ],
+        "responses":[
+            "Of course! What do you need help with?",
+            "I'm here to assist you. What do you need?",
+            "Sure! How can I help you today?",
+            "Absolutely! What assistance do you require?"
+        ],
+        // "context_set":""    
+    },
+    {
+        "tag":"weather",
+        "patterns":[
+            "What's the weather today?",
+            "Tell me the weather",
+            "Is it going to rain?",
+            "What's the forecast?",
+            "How's the weather looking?"
+        ],
+        "responses":[
+            "I can provide weather updates. Please specify a location.",
+            "For weather information, please tell me the city or region.",
+            "I can check the weather for you. Which location are you interested in?",
+            "Please provide a location for the weather update."
+        ],
+        // "context_set":""    
+    },
+    {
+        "tag":"time",
+        "patterns":[
+            "What time is it?",
+            "Tell me the time",
+            "What's the current time?",
+            "How late is it?",
+            "Can you tell me the time?"
+        ],
+        "responses":[
+            "I can provide the current time. Please specify your timezone.",
+            "For the time, please tell me your location.",
+            "I can check the time for you. What timezone are you in?",
+            "Please provide a location for the current time."
+        ],
+        // "context_set":""    
+    },
+    {
+        "tag":"date",
+        "patterns":[
+            "What date is it?",
+            "Tell me the date",
+            "What's today's date?",
+            "How's the date looking?",
+            "Can you tell me the date?"
+        ],
+        "responses":[
+            "I can provide the current date. Please specify your timezone.",
+            "For the date, please tell me your location.",
+            "I can check the date for you. What timezone are you in?",
+            "Please provide a location for the current date."
+        ],
+        // "context_set":""    
+    },
+    {
+        "tag":"news",
+        "patterns":[
+            "What's the latest news?",
+            "Tell me the news",
+            "Any updates on current events?",
+            "What's happening in the world?",
+            "Give me the news"
+        ],
+        "responses":[
+            "I can provide news updates. Please specify a topic or region.",
+            "For news information, please tell me the topic you're interested in.",
+            "I can check the latest news for you. What topic do you want to know about?",
+            "Please provide a topic for the news update."
+        ],
+        // "context_set":""    
+    },
+
+    {
+        "tag":"quotes",
+        "patterns":[
+            "Tell me a quote",
+            "I want to hear a quote",
+            "Give me an inspirational quote",
+            "Share a motivational quote",
+            "What is a good quote?"
+        ],
+        "responses":[
+            "The only way to do great work is to love what you do. - Steve Jobs",
+            "Success is not the key to happiness. Happiness is the key to success. - Albert Schweitzer",
+            "Believe you can and you're halfway there. - Theodore Roosevelt",
+            "The best time to plant a tree was 20 years ago. The second best time is now. - Chinese Proverb"
+        ],
+        // "context_set":""    
+    },
+    {
+        "tag":"jokes",
+        "patterns":[
+            "Tell me a joke",
+            "Make me laugh",
+            "I want to hear a joke",
+            "Do you know any jokes?",
+            "Give me a funny story"
+        ],
+        "responses":[
+            "Why don't scientists trust atoms? Because they make up everything!",
+            "I told my computer I needed a break, and now it won't stop sending me beach wallpapers!",
+            "Why did the scarecrow win an award? Because he was outstanding in his field!",
+            "I used to play piano by ear, but now I use my hands."
+        ],
+        // "context_set":""    
+    },
+    {
+        "tag":"facts",
+        "patterns":[
+            "Tell me a fact",
+            "I want to learn something new",
+            "Give me a fun fact",
+            "Do you know any interesting facts?",
+            "Share a random fact"
+        ],
+        "responses":[
+            "Did you know honey never spoils? Archaeologists have found pots of honey in ancient Egyptian tombs that are over 3000 years old and still edible!",
+            "A group of flamingos is called a 'flamboyance.'",
+            "Bananas are berries, but strawberries aren't!",
+            "Octopuses have three hearts."
+        ],
+        // "context_set":""    
+    },
+    {
+        "tag":"music",
+        "patterns":[
+            "Play some music",
+            "I want to listen to music",
+            "Put on a song",
+            "Can you play a tune?",
+            "Play my favorite song"
+        ],
+        "responses":[
+            "Sure! What genre of music do you prefer?",
+            "I can play music for you. What type do you like?",
+            "Please tell me your favorite genre or artist.",
+            "What kind of music would you like to listen to?"
+        ],
+        // "context_set":""    
+    },
+    {
+        "tag":"movies",
+        "patterns":[
+            "Recommend a movie",
+            "What should I watch?",
+            "Tell me about a good film",
+            "Suggest a movie for me",
+            "I need a movie recommendation"
+        ],
+        "responses":[
+            "Sure! What genre do you prefer?",
+            "I can suggest movies. What type do you like?",
+            "Please tell me your favorite genre or actor.",
+            "What kind of movie are you in the mood for?"
+        ],
+        // "context_set":""    
+    },
+    {
+        "tag":"sports",
+        "patterns":[
+            "Tell me about sports",
+            "What are the latest sports updates?",
+            "I want to know about my favorite team",
+            "Give me sports news",
+            "What's happening in the sports world?"
+        ],
+        "responses":[
+            "I can provide sports updates. Please specify a sport or team.",
+            "For sports information, please tell me the sport you're interested in.",
+            "I can check the latest sports news for you. What sport do you want to know about?",
+            "Please provide a sport or team for the update."
+        ],
+        // "context_set":""    
+    },
+    {
+        "tag":"travel",
+        "patterns":[
+            "Tell me about travel destinations",
+            "I want to plan a trip",
+            "What are the best places to visit?",
+            "Give me travel tips",
+            "Where should I go on vacation?"
+        ],
+        "responses":[
+            "I can help with travel information. What destination are you interested in?",
+            "For travel tips, please tell me your preferred location.",
+            "I can suggest travel destinations. What type of trip do you want?",
+            "Please provide a location for travel recommendations."
+        ],
+        // "context_set":""    
+    },
+    {
+        "tag":"food",
+        "patterns":[
+            "Tell me about food recipes",
+            "I want to cook something new",
+            "Give me a recipe",
+            "What should I make for dinner?",
+            "I need cooking ideas"
+        ],
+        "responses":[
+            "I can help with recipes. What type of cuisine do you prefer?",
+            "For cooking ideas, please tell me your favorite ingredients.",
+            "I can suggest recipes. What kind of dish are you in the mood for?",
+            "Please provide a cuisine or ingredient for recipe suggestions."
+        ],
+        // "context_set":""    
+    },
+    {
+        "tag":"health",
+        "patterns":[
+            "Tell me about health tips",
+            "I want to stay healthy",
+            "Give me fitness advice",
+            "What should I eat for a healthy diet?",
+            "I need health information"
+        ],
+        "responses":[
+            "I can provide health tips. What specific area are you interested in?",
+            "For fitness advice, please tell me your goals.",
+            "I can suggest healthy habits. What do you want to focus on?",
+            "Please provide a health topic for more information."
+        ],
+        // "context_set":""    
+    },
+    {
+        "tag":"technology",
+        "patterns":[
+            "Tell me about technology trends",
+            "I want to learn about new gadgets",
+            "What are the latest tech updates?",
+            "Give me tech news",
+            "What's happening in the tech world?"
+        ],
+        "responses":[
+            "I can provide technology updates. Please specify a topic.",
+            "For tech information, please tell me the area you're interested in.",
+            "I can check the latest tech news for you. What topic do you want to know about?",
+            "Please provide a topic for the tech update."
+        ],
+        // "context_set":""    
+    },
+    {
+        "tag":"finance",
+        "patterns":[
+            "Tell me about finance tips",
+            "I want to manage my money better",
+            "Give me investment advice",
+            "What should I know about saving?",
+            "I need financial information"
+        ],
+        "responses":[
+            "I can provide finance tips. What specific area are you interested in?",
+            "For investment advice, please tell me your goals.",
+            "I can suggest financial habits. What do you want to focus on?",
+            "Please provide a finance topic for more information."
+        ],
+        // "context_set":""    
+    },
+    {
+        "tag":"education",
+        "patterns":[
+            "Tell me about education resources",
+            "I want to learn something new",
+            "Give me study tips",
+            "What should I know about online courses?",
+            "I need educational information"
+        ],
+        "responses":[
+            "I can provide education resources. What specific area are you interested in?",
+            "For study tips, please tell me your goals.",
+            "I can suggest learning methods. What do you want to focus on?",
+            "Please provide an education topic for more information."
+        ],
+        // "context_set":""    
+    },
+    {
+        "tag":"shopping",
+        "patterns":[
+            "Tell me about shopping deals",
+            "I want to buy something",
+            "Give me product recommendations",
+            "What should I know about online shopping?",
+            "I need shopping tips"
+        ],
+        "responses":[
+            "I can provide shopping tips. What specific area are you interested in?",
+            "For product recommendations, please tell me your preferences.",
+            "I can suggest shopping methods. What do you want to focus on?",
+            "Please provide a shopping topic for more information."
+        ],
+        // "context_set":""    
+    },
+    {
+        "tag":"home",
+        "patterns":[
+            "Tell me about home improvement",
+            "I want to decorate my house",
+            "Give me DIY tips",
+            "What should I know about home repairs?",
+            "I need home improvement information"
+        ],
+        "responses":[
+            "I can provide home improvement tips. What specific area are you interested in?",
+            "For DIY tips, please tell me your goals.",
+            "I can suggest home improvement methods. What do you want to focus on?",
+            "Please provide a home topic for more information."
+        ],
+        // "context_set":""    
+    },
+    {
+        "tag":"pets",
+        "patterns":[
+            "Tell me about pet care",
+            "I want to adopt a pet",
+            "Give me pet training tips",
+            "What should I know about pet health?",
+            "I need pet information"
+        ],
+        "responses":[
+            "I can provide pet care tips. What specific area are you interested in?",
+            "For pet training advice, please tell me your goals.",
+            "I can suggest pet care methods. What do you want to focus on?",
+            "Please provide a pet topic for more information."
+        ],
+        // "context_set":""    
+    },
+    {
+        "tag":"fashion",
+        "patterns":[
+            "Tell me about fashion trends",
+            "I want to update my wardrobe",
+            "Give me style tips",
+            "What should I know about fashion?",
+            "I need fashion advice"
+        ],
+        "responses":[
+            "I can provide fashion tips. What specific area are you interested in?",
+            "For style advice, please tell me your preferences.",
+            "I can suggest fashion methods. What do you want to focus on?",
+            "Please provide a fashion topic for more information."
+        ],
+        // "context_set":""    
+    },
+    {
+        "tag":"fitness",
+        "patterns":[
+            "Tell me about fitness routines",
+            "I want to get in shape",
+            "Give me workout tips",
+            "What should I know about exercise?",
+            "I need fitness advice"
+        ],
+        "responses":[
+            "I can provide fitness tips. What specific area are you interested in?",
+            "For workout advice, please tell me your goals.",
+            "I can suggest fitness methods. What do you want to focus on?",
+            "Please provide a fitness topic for more information."
+        ],
+        // "context_set":""    
+    },
+    {
+        "tag":"selfcare",
+        "patterns":[
+            "Tell me about self-care tips",
+            "I want to relax and unwind",
+            "Give me mindfulness advice",
+            "What should I know about mental health?",
+            "I need self-care information"
+        ],
+        "responses":[
+            "I can provide self-care tips. What specific area are you interested in?",
+            "For mindfulness advice, please tell me your goals.",
+            "I can suggest self-care methods. What do you want to focus on?",
+            "Please provide a self-care topic for more information."
+        ],
+        // "context_set":""    
+    },
+    {
+        "tag":"hobbies",
+        "patterns":[
+            "Tell me about hobbies",
+            "I want to start a new hobby",
+            "Give me hobby ideas",
+            "What should I know about hobbies?",
+            "I need hobby information"
+        ],
+        "responses":[
+            "I can provide hobby tips. What specific area are you interested in?",
+            "For hobby advice, please tell me your preferences.",
+            "I can suggest hobbies. What do you want to focus on?",
+            "Please provide a hobby topic for more information."
+        ],
+        // "context_set":""    
+    },
+    {
+        "tag":"books",
+        "patterns":[
+            "Tell me about books",
+            "I want to read something new",
+            "Give me book recommendations",
+            "What should I know about reading?",
+            "I need book information"
+        ],
+        "responses":[
+            "I can provide book tips. What specific area are you interested in?",
+            "For book recommendations, please tell me your preferences.",
+            "I can suggest books. What do you want to focus on?",
+            "Please provide a book topic for more information."
+        ],
+        // "context_set":""    
+    },
+    {
+        "tag":"art",
+        "patterns":[
+            "Tell me about art",
+            "I want to learn about painting",
+            "Give me art tips",
+            "What should I know about art history?",
+            "I need art information"
+        ],
+        "responses":[
+            "I can provide art tips. What specific area are you interested in?",
+            "For art advice, please tell me your preferences.",
+            "I can suggest art methods. What do you want to focus on?",
+            "Please provide an art topic for more information."
+        ],
+        // "context_set":""    
+    },
+    {
+        "tag":"history",
+        "patterns":[
+            "Tell me about history",
+            "I want to learn about historical events",
+            "Give me history tips",
+            "What should I know about world history?",
+            "I need history information"
+        ],
+        "responses":[
+            "I can provide history tips. What specific area are you interested in?",
+            "For history advice, please tell me your preferences.",
+            "I can suggest historical methods. What do you want to focus on?",
+            "Please provide a history topic for more information."
+        ],
+        // "context_set":""    
+    },
+    {
+        "tag":"science",
+        "patterns":[
+            "Tell me about science",
+            "I want to learn about scientific concepts",
+            "Give me science tips",
+            "What should I know about biology?",
+            "I need science information"
+        ],
+        "responses":[
+            "I can provide science tips. What specific area are you interested in?",
+            "For science advice, please tell me your preferences.",
+            "I can suggest scientific methods. What do you want to focus on?",
+            "Please provide a science topic for more information."
+        ],
+        // "context_set":""    
+    },
+    {
+        "tag":"philosophy",
+        "patterns":[
+            "Tell me about philosophy",
+            "I want to learn about philosophical concepts",
+            "Give me philosophy tips",
+            "What should I know about ethics?",
+            "I need philosophy information"
+        ],
+        "responses":[
+            "I can provide philosophy tips. What specific area are you interested in?",
+            "For philosophy advice, please tell me your preferences.",
+            "I can suggest philosophical methods. What do you want to focus on?",
+            "Please provide a philosophy topic for more information."
+        ]
+    }
+]
