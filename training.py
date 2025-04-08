@@ -87,6 +87,9 @@ model.add(Dense(len(train_y[0]),
                 activation='softmax')) # Adding a dense layer with the same number of neurons as the output and softmax activation function
 
 # Compiling the model
+sgd = SGD(lr=0.01, decay=1e-6, momentum=0.9, nesterov=True) # Creating an SGD optimizer with learning rate of 0.01, decay of 1e-6 and momentum of 0.9
 # Compiling the model with categorical crossentropy loss function and adam optimizer
-model.compile(loss='categorical_crossentropy', optimizer=Adam(learning_rate=0.001), metrics=['accuracy']) 
+model.compile(loss='categorical_crossentropy',
+                optimizer=sgd, metrics=['accuracy']) 
+
     
