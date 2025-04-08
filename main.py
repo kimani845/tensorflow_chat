@@ -43,10 +43,12 @@ def predict_class(sentence, model):
     p = bagw(sentence, words) # Getting the bag of words for the input sentence
     res = model.predict(np.array([p]))[0] # Predicting the class of the input sentence
     ERROR_THRESHOLD = 0.25 # Setting the error threshold
-    results = [[i, r] for i, r in enumerate(res) if r > ERROR_THRESHOLD] # Getting the index and probability of the predicted class
+    results = [[i, r] for i, r in enumerate(res) 
+                if r > ERROR_THRESHOLD] # Getting the index and probability of the predicted class
     results.sort(key=lambda x: x[1], reverse=True) # Sorting the results in descending order of probability
     return_list = [] # Creating an empty list to hold the predicted classes and probabilities
     for r in results: # Looping through the results
-        return_list.append({'intent': classes[r[0]], 'probability': str(r[1])}) # Appending the predicted class and probability to the return_list
+        return_list.append({'intent': classes[r[0]],
+                            'probability': str(r[1])}) # Appending the predicted class and probability to the return_list
     
     return return_list # Returning the list of predicted classes and probabilities
