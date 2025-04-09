@@ -1,9 +1,9 @@
 pandas
-json
-random 
-pickle
+# json
+# random 
+# pickle
 numpy
-pickle
+# pickle
 numpy
-tensorflow
+# tensorflow
 nltk 
