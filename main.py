@@ -63,3 +63,12 @@ def get_response(intents_list, intents_json):
             break
     
     return response # Returning the response
+
+# A while loop that will prompt the user for an input and return the response from the chatbot
+while True:
+    message = input("") # Getting the input from the user
+    if message.lower() == "exit": # If the user types exit, break the loop
+        break
+    intents_list = predict_class(message, model) # Getting the predicted class for the input sentence
+    response = get_response(intents_list, intents) # Getting the response for the predicted class
+    print(response) # Printing the response from the chatbot
