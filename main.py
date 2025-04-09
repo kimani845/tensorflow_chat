@@ -51,4 +51,15 @@ def predict_class(sentence, model):
         return_list.append({'intent': classes[r[0]],
                             'probability': str(r[1])}) # Appending the predicted class and probability to the return_list
     
-    return return_list # Returning the list of predicted classes and probabilities
+    return return_list # Returning list of predicted classes and probabilities
+
+# A function to get the response for the input sentence
+def get_response(intents_list, intents_json):
+    tag = intents_list[0]['intent'] # Getting the predicted class
+    list_of_intents = intents_json['intents'] # Getting the list of intents from the intents.json file
+    for i in list_of_intents: # Looping through the list of intents
+        if i['tag'] == tag: # If the predicted class matches the intent tag
+            response = random.choice(i['responses']) # Getting a random response from the intent
+            break
+    
+    return response # Returning the response
