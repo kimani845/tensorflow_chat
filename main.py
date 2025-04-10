@@ -23,7 +23,7 @@ def clean_up_sentence(sentence):
     sentence_words = nltk.word_tokenize(sentence) # Tokenizing the sentence
     sentence_words = [lemmatizer.lemmatize(word.lower()) 
                         for word in sentence_words] # Lemmatizing the words in the sentence
-    return sentence_words # Returning the list of words in the sentence
+    return sentence_words # Returning the list of words in the sentences
 
 #  Appending 1 to the index of the words that are present in the sentence and 0 to the rest of the words
 def bagw(sentence, words):
